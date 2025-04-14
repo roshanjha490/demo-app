@@ -1,0 +1,10 @@
+name: Fork Repository
+
+on: fork
+
+jobs:
+  welcome:
+    runs-on: ubuntu-latest
+    steps:
+      - name: Display the username who forked the repo
+        run: echo "Thanks @${{ github.event.forkee.owner.login }} for forking this repository! 🎉" 
