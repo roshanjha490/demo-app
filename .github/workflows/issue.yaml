@@ -1,10 +1,8 @@
-name: issue management
-
+name: Issue Management
 
 on:
   issues:
     types: [opened]
-
 
 job:
   welcome:
@@ -22,6 +20,6 @@ job:
             })
   
       - name: Add triage label
-          uses: actions-ecosystem/action-add-labels@v1
-          with:
-            labels: triage
+        uses: actions-ecosystem/action-add-labels@v1
+        with:
+          labels: triage
