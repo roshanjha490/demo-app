@@ -1,5 +1,6 @@
 name: Issue Management
 
+
 on:
   issues:
     types: [opened]
@@ -8,7 +9,6 @@ jobs:
   welcome:
     runs-on: ubuntu-latest
     steps:
-      - name: Comment on new issue
       - uses: actions/checkout@v4
       - uses: EddieHubCommunity/gh-action-community/src/welcome@main
         with:
