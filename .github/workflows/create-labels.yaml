@@ -1,7 +1,7 @@
 name: Create Custom Labels
 
 on:
-  workflow_dispatch:  # Manual trigger; use push or schedule if needed
+  workflow_dispatch:
 
 jobs:
   create-labels:
