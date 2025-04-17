@@ -1,0 +1,92 @@
+name: Create Custom Labels
+
+on:
+  workflow_dispatch:  # Manual trigger; use push or schedule if needed
+
+jobs:
+  create-labels:
+    runs-on: ubuntu-latest
+    steps:
+      - name: Create goal: new-feature
+        uses: peter-evans/create-or-update-label@v2
+        with:
+          name: goal: new-feature
+          color: 0E8A16
+          description: A new feature request or addition
+
+      - name: Create priority: high
+        uses: peter-evans/create-or-update-label@v2
+        with:
+          name: priority: high
+          color: B60205
+          description: Needs to be addressed ASAP
+
+      - name: Create documentation
+        uses: peter-evans/create-or-update-label@v2
+        with:
+          name: documentation
+          color: 0075ca
+          description: Changes related to docs
+
+      - name: Create bug
+        uses: peter-evans/create-or-update-label@v2
+        with:
+          name: bug
+          color: D73A4A
+          description: Something is broken
+
+      - name: Create priority: medium
+        uses: peter-evans/create-or-update-label@v2
+        with:
+          name: priority: medium
+          color: FBCA04
+          description: Moderate priority
+
+      - name: Create chore
+        uses: peter-evans/create-or-update-label@v2
+        with:
+          name: chore
+          color: D4C5F9
+          description: Maintenance or routine tasks
+
+      - name: Create goal: new-category
+        uses: peter-evans/create-or-update-label@v2
+        with:
+          name: goal: new-category
+          color: 1D76DB
+          description: Adding a new category
+
+      - name: Create priority: low
+        uses: peter-evans/create-or-update-label@v2
+        with:
+          name: priority: low
+          color: C2E0C6
+          description: Low urgency
+
+      - name: Create goal: new-link
+        uses: peter-evans/create-or-update-label@v2
+        with:
+          name: goal: new-link
+          color: A2EEEF
+          description: Creating or updating links
+
+      - name: Create goal: build
+        uses: peter-evans/create-or-update-label@v2
+        with:
+          name: goal: build
+          color: 5319E7
+          description: Build system changes
+
+      - name: Create goal: refactor
+        uses: peter-evans/create-or-update-label@v2
+        with:
+          name: goal: refactor
+          color: E99695
+          description: Code improvements without behavior change
+
+      - name: Create accessibility
+        uses: peter-evans/create-or-update-label@v2
+        with:
+          name: accessibility
+          color: FEF2C0
+          description: Accessibility-related improvements
