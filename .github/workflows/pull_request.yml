@@ -1,0 +1,20 @@
+name: Greetings
+
+on:
+  fork:
+  push:
+    branches: [main]
+  issues:
+    types: [opened]
+  pull_request_target:
+    types: [opened]
+
+jobs:
+  welcome:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v4
+      - uses: EddieHubCommunity/gh-action-community/src/welcome@main
+        with:
+          github-token: ${{ secrets.GITHUB_TOKEN }}
+          pr-message: "Thank you, ${{ github.actor }}, for creating this pull request and contributing to LinksHub! 💗\n\n The maintainers will review this Pull Request and provide feedback as soon as possible! 😇\nWe appreciate your patience and contribution, Keep up the great work! 😀"
