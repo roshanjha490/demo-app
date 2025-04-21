@@ -26,5 +26,5 @@ jobs:
           ssh -o StrictHostKeyChecking=no ${{ secrets.VPS_USER }}@${{ secrets.VPS_HOST }} "
             cd uat_app &&
             git config --global --add safe.directory /home/roshan/uat_app &&
-            git pull origin master
+            git pull
           "
