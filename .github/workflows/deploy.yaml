@@ -24,7 +24,6 @@ jobs:
       - name: Deploy via SSH
         run: |
           ssh -o StrictHostKeyChecking=no ${{ secrets.VPS_USER }}@${{ secrets.VPS_HOST }} "
-            cd /path/to/your/app 
-            pwd
-            ls
+            cd uat_app
+            git pull origin master
           "
